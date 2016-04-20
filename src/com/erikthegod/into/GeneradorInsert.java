@@ -60,7 +60,7 @@ public class GeneradorInsert {
             aleatorioCategoria = (int) (Math.random()* pers.getCategoria().length);
             pers.setSalario(((int) (Math.random()*142000)+1)+8000);
             pers.setFechaNacimiento(((int) (Math.random()*47)+1)+1951);
-            fichero.println("insert into t_empleados values('" + pers.getNombre()[aleatorioNomb] + "','" + pers.getApellido()[aleatorioApellido]  + "','" +  pers.getCategoria()[aleatorioCategoria]+"','"+ pers.getSalario()+"','"+ pers.getFechaNacimiento()+"');");
+            fichero.println("insert into t_empleados values('" + pers.getNombre()[aleatorioNomb] + "','" + pers.getApellido()[aleatorioApellido]  + "','" +  pers.getCategoria()[aleatorioCategoria]+"',"+ pers.getSalario()+","+ pers.getFechaNacimiento()+");");
             }
         } catch (FileNotFoundException ex) {
             System.out.println("Fallo al exportar el juego");
